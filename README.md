@@ -76,7 +76,7 @@ EC2 (Nginx)  사설 IP 10.0.1.x + 퍼블릭 IP
 | SSH 접속 | `ssh -i <키>.pem ubuntu@13.125.200.239` | 성공 |
 | 웹 서버 실행 | `systemctl status nginx` | 시작 로그 확인 |
 | localhost 응답 | `curl -I http://localhost` | `HTTP/1.1 200 OK` |
-| 아웃바운드 통신 | EC2에서 `curl -I https://example.com` | `HTTP/2 200` |
+| 아웃바운드 통신 | EC2에서 `curl -I https://example.com` | `HTTP/2 200` (`docs/images/outbound-curl.png`) |
 | 외부 접속 | 브라우저에서 `http://13.125.200.239` | 페이지 표시 (섹션 1) |
 
 ## 6. 트러블슈팅
@@ -100,5 +100,6 @@ docs/
 ├── troubleshooting.md
 ├── cleanup-checklist.md
 └── images/
-    └── external-access.png
+    ├── external-access.png
+    └── outbound-curl.png
 ```
